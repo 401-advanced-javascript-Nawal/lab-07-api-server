@@ -42,7 +42,7 @@ describe(' Server Testing ', () => {
     /**************** Routes ****************/
 
     // categories
-    it('Routes , Valid route test  ', () => {
+    it('categories Routes , Valid route test  ', () => {
         return mockRequest
             .get('/api/v1/categories')
             .then(data => {
@@ -50,7 +50,7 @@ describe(' Server Testing ', () => {
             }).catch(e => console.error(e));
     }); // get
 
-    it('Routes , Valid route test with ID ', () => {
+    it('categories Routes , Valid route test with ID ', () => {
         return mockRequest
             .get('/api/v1/categories/1')
             .then(data => {
@@ -58,7 +58,7 @@ describe(' Server Testing ', () => {
             }).catch(e => console.error(e));
     }); // get ID
 
-    it('Routes , Valid route test  ', () => {
+    it('categories Routes , Valid route test  ', () => {
         return mockRequest
             .post('/api/v1/categories')
             .then(data => {
@@ -66,7 +66,7 @@ describe(' Server Testing ', () => {
             }).catch(e => console.error(e));
     }); // post
 
-    it('Routes , Valid route test  ', () => {
+    it('categories Routes , Valid route test with ID ', () => {
         return mockRequest
             .put('/api/v1/categories/1')
             .then(data => {
@@ -74,7 +74,7 @@ describe(' Server Testing ', () => {
             }).catch(e => console.error(e));
     }); // put
 
-    it('Routes , Valid route test  ', () => {
+    it('categories Routes , Valid route test with ID ', () => {
         return mockRequest
             .delete('/api/v1/categories/1')
             .then(data => {
@@ -84,7 +84,7 @@ describe(' Server Testing ', () => {
 
 
     // Products
-    it('Routes , Valid route test  ', () => {
+    it('Products Routes , Valid route test  ', () => {
         return mockRequest
             .get('/api/v1/products')
             .then(data => {
@@ -92,13 +92,37 @@ describe(' Server Testing ', () => {
             }).catch(e => console.error(e));
     }); // get
 
-    it('Routes , Valid route test with ID ', () => {
+    it('Products Routes , Valid route test with ID ', () => {
         return mockRequest
             .get('/api/v1/products/2')
             .then(data => {
                 expect(data.status).toBe(200);
             }).catch(e => console.error(e));
     }); // get ID
+
+    it('Products Routes , Valid route test  ', () => {
+        return mockRequest
+            .post('/api/v1/products')
+            .then(data => {
+                expect(data.status).toBe(200);
+            }).catch(e => console.error(e));
+    }); // post
+
+    it('Products Routes , Valid route test with ID ', () => {
+        return mockRequest
+            .put('/api/v1/products/1')
+            .then(data => {
+                expect(data.status).toBe(200);
+            }).catch(e => console.error(e));
+    }); // put
+
+    it('Products Routes , Valid route test with ID ', () => {
+        return mockRequest
+            .delete('/api/v1/products/1')
+            .then(data => {
+                expect(data.status).toBe(200);
+            }).catch(e => console.error(e));
+    }); // delete
 
     
 }); // end of server testing 
