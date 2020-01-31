@@ -62,7 +62,7 @@ describe(' Server Testing ', () => {
         return mockRequest
             .post('/api/v1/categories')
             .then(data => {
-                expect(data.status).toBe(201);
+                expect(data.status).toBe(200);
             }).catch(e => console.error(e));
     }); // post
 
@@ -78,7 +78,7 @@ describe(' Server Testing ', () => {
         return mockRequest
             .delete('/api/v1/categories/1')
             .then(data => {
-                expect(data.status).toBe(201);
+                expect(data.status).toBe(200);
             }).catch(e => console.error(e));
     }); // delete
 
