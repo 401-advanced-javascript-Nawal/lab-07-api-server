@@ -4,8 +4,8 @@
   "description": "# Pull Request :",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.js",
-    "test": "jest --coverage",
+    "lint": "eslint '**/*.js'",
+    "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --coverage",
     "start": "nodemon index.js"
   },
